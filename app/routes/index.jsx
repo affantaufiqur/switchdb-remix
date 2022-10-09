@@ -11,7 +11,7 @@ export default function Index() {
   const { switchItem, switches } = useLoaderData()
 
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
+    <div className="flex">
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -31,8 +31,8 @@ export default function Index() {
           >
             {switches?.map((switchItem) => {
               return (
-                <div key={switchItem.id}>
-                  <h1>{switchItem.switchName}</h1>
+                <div key={switchItem?.id}>
+                  <h1>{switchItem?.switchName}</h1>
                 </div>
               )
             })}
