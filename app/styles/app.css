@@ -507,3 +507,40 @@ video {
 .flex {
   display: flex;
 }
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
+}
+
+.font-ubuntu {
+  font-family: Ubuntu, sans-serif;
+}
+
+body {
+  font-family: 'Ubuntu';
+}
+
+@media (min-width: 1280px) {
+  .xl\:px-80 {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}
