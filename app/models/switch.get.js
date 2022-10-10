@@ -6,6 +6,9 @@ const getIndividualSwitchQuery = gql`
     switch(where: { id: "cl4e2eq4192av0c13lm3ee7ko" }) {
       switchName
       switchType
+      switchImage {
+        url
+      }
     }
   }
 `
@@ -17,6 +20,9 @@ const getMultipleSwitchQuery = gql`
       switchMount
       switchName
       switchType
+      switchImage {
+        url
+      }
     }
   }
 `
