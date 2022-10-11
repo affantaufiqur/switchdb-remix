@@ -1,3 +1,4 @@
+import Navigation from './components/navigation.component'
 import styles from './styles/app.css'
 
 const { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } = require('@remix-run/react')
@@ -23,6 +24,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Navigation />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

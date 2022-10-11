@@ -2,13 +2,26 @@ import { gql } from 'graphql-request'
 import { makeGraphqlQuery } from '~/utils/graphql.utils'
 
 const getIndividualSwitchQuery = gql`
-  {
-    switch(where: { id: "cl4e2eq4192av0c13lm3ee7ko" }) {
+  query getSwitchItem($switchName: String!) {
+    switch(where: { switchName: $switchName }) {
       switchName
       switchType
       switchImage {
         url
       }
+      topHousing
+      totalTravel
+      updatedAt
+      switchMount
+      stem
+      brand {
+        brandName
+      }
+      actuationForce
+      actuationTravel
+      bottomHousing
+      bottomOutForce
+      lube
     }
   }
 `
@@ -27,8 +40,8 @@ const getMultipleSwitchQuery = gql`
   }
 `
 
-export const getIndividualSwitch = async () => {
-  const data = await makeGraphqlQuery(getIndividualSwitchQuery)
+export const getIndividualSwitch = async (switchName) => {
+  const data = await makeGraphqlQuery(getIndividualSwitchQuery, { switchName })
   return data
 }
 

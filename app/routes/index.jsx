@@ -1,8 +1,7 @@
 import { useLoaderData } from '@remix-run/react'
 import { getMultipleSwitch } from '~/models/switch.get'
-import Navigation from '~/components/navigation.component'
-import SearchBar from '~/components/search-bar.component'
 import SwitchCard from '~/components/switch-card.component'
+import SearchBar from '~/components/search-bar.component'
 
 export const loader = async () => {
   const { switches } = await getMultipleSwitch()
@@ -14,16 +13,13 @@ export default function Index() {
 
   return (
     <div className="xl:px-80 text-white-50">
-      <Navigation />
       <section className="py-24">
-        <div>
-          <section className="my-4">
-            <SearchBar />
-          </section>
-          <div className="grid grid-cols-4 gap-6">
-            <SwitchCard switchData={switches} />
-          </div>
+        <div className="my-4">
+          <SearchBar />
         </div>
+        <section className="grid grid-cols-4 gap-4">
+          <SwitchCard switchData={switches} />
+        </section>
       </section>
     </div>
   )
