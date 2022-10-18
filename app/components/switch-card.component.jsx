@@ -8,9 +8,9 @@ export default function SwitchCard({ switchData }) {
         return (
           <Link
             to={switchName.replace(/\s+/g, '-')}
-            className="flex flex-col p-4 border-2 border-cod-gray-800 hover:shadow-lg transition-all duration-250 hover:scale-105"
+            className="flex flex-col p-4 border-2 border-cod-gray-800 hover:shadow-cod-gray-800 hover:shadow-2xl transition-all duration-250"
             key={id}
-            prefetch="render"
+            prefetch="intent"
           >
             <img
               src={switchImage[0]?.url}

@@ -10,13 +10,12 @@ export const loader = async ({ params }) => {
 
 export default function SwitchItem() {
   const { switch: switchItem } = useLoaderData()
-  console.log(switchItem)
 
   return (
     <div className="xl:px-80 text-white-50">
       <section className="py-24">
         <div className="grid grid-cols-2">
-          <div>
+          <div className="mr-9">
             <h1 className="text-white-50 text-2xl">{switchItem?.switchName}</h1>
             <h3 className="text-white-300 text-lg">{switchItem?.switchType}</h3>
             <div className="mt-4 flex flex-col gap-y-2">

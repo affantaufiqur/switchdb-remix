@@ -1,3 +1,5 @@
+import { Form } from '@remix-run/react'
+
 export default function SearchBar() {
   return (
     <div className="relative">
@@ -15,11 +17,14 @@ export default function SearchBar() {
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         />
       </svg>
-      <input
-        type="text"
-        placeholder="Search"
-        className="w-full py-3 pl-12 pr-4 text-white-50 border rounded-md outline-none bg-cod-gray-900 focus:bg-white focus:border-indigo-300"
-      />
+      <Form>
+        <input
+          type="search"
+          placeholder="Search"
+          className="w-full py-3 pl-12 pr-4 text-white-50 border rounded-md outline-none bg-cod-gray-900 focus:bg-white focus:border-indigo-300"
+          name="query"
+        />
+      </Form>
     </div>
   )
 }
